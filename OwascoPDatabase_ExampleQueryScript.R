@@ -1,6 +1,6 @@
 # SQL Example Script to Search Owasco Lake Phosphorus Database
 # By Sheila Saia
-# Last Updated 10/28/2015
+# Last Updated 11/4/2015
 #
 #
 # ---------------------------------------------------
@@ -19,7 +19,7 @@ library(sqldf) #R version of sql (i.e. sqlite)
 # ---------------------------------------------------
 #
 # directory must be set to the folder where database text files are kept
-setwd('C://Users//Sheila//Dropbox//Extension//OLW_Pdb_20151026//TextFiles')
+setwd('C://Users//Sheila//Documents//Cornell//CodeRepository//Owasco_Lake_P_ Database//OwascoLakePDatabase//TextFiles')
 #
 #
 # ---------------------------------------------------
@@ -37,7 +37,7 @@ for (i in 1:nrow(File_List))
 # -----------------------------------------------------------------
 # 
 # number of TP entries where SRP>TP
-length(Sample_Data$TPmgL[Sample_Data$TPmgL<Sample_Data$SRPmgL])
+#length(Sample_Data$TPmgL[Sample_Data$TPmgL<Sample_Data$SRPmgL])
 #
 # location id's of TP entries where SRP>TP
 Sample_Data$LocationID[Sample_Data$TPmgL<Sample_Data$SRPmgL]
@@ -66,6 +66,9 @@ Sample_Data$TPLoadmgsfix[which(c(Sample_Data$TPmgL<Sample_Data$SRPmgL)==TRUE)]="
 # select sample location, season, and TP concentration where the season is autumn
 autumnTP=sqldf("SELECT LocationID, Season, TPmgLfix FROM Sample_Data WHERE Season = 'autumn'")
 #
+# same as previous but without NA values
+autumnTPnoNAs=sqldf("SELECT LocationID, Season, TPmgLfix FROM Sample_Data WHERE Season = 'autumn' AND TPmgLfix <> 'NA'")
+#
 # join the information for the site with information about sample events
 spatial1=sqldf("SELECT LocationID, Lat, Long, Waterbody, TPmgLfix FROM Site_Info JOIN Sample_Data USING (LocationID)")
 #
@@ -77,11 +80,14 @@ spatial2=sqldf("SELECT s.LocationID, Lat, Long, Waterbody, TPmgLfix FROM Site_In
 # 'USING' is a shortcut command (can also use 'On'), for 'USING' column names MUST be exactly the same!
 #
 # average TP concentration for each site for each season
-avgTPseason=sqldf("SELECT LocationID, Season, Avg(TPmgLfix) FROM Sample_Data GROUP BY LocationID, Season")
+avgTPseason=sqldf("SELECT LocationID, Season, Avg(TPmgLfix) AvgTPmgLfix FROM Sample_Data GROUP BY LocationID, Season")
 # comma needed to sepearate columns
+# if you put AvgTPmgLfix after the Avg() command then it will name the new column with AvgTPmgLfix
 # take out one of the group by terms and see how that changes the result
 # mean(na.omit(as.numeric(Sample_Data$TPmgLfix[Sample_Data$Season == "autumn"])))
-# (ask Matt - is avg() command counting NA's in the average as if they are zero's?)
+#
+# use avgTPseason to plot TP for autumn for different sites
+plot(avgTPseason$AvgTPmgLfix[avgTPseason$Season=="autumn"]~avgTPseason$LocationID[avgTPseason$Season=="autumn"], ylab="Average Autumn TP (mg/L)",xlab="",las=2)
 #
 # calculate the min and max flow of all the data
 sqldf("SELECT Min(FlowCFS), Max(FlowCFS) FROM Sample_Data")
@@ -118,7 +124,7 @@ wintertp1=sqldf("SELECT LocationID, SampleDate, TPmgLfix FROM Sample_Data WHERE 
 wintertp2=sqldf("SELECT * FROM Sample_Data WHERE Season = 'winter'")
 #
 # add a column that selects out the year from the date for all TP data in the winter and name it as new column 'SampleYear'
-wintertp3=sqldf("SELECT LocationID, substr(SampleDate,Length(SampleDate)-3,4) SampleYear, TPmgLfix FROM Sample_Data WHERE Season = 'winter'")
+wintertp3=sqldf("SELECT LocationID, substr(SampleDate,Length(SampleDate)-3,4) SampleYear, TPmgLfix FROM Sample_Data WHERE Season = 'winter' AND TPmgLfix <> 'NA'")
 #
 # same as wintertp3 but make sure data are integers so we can plot them, be careful though because NA's will be turned into zeros
 #wintertp4=sqldf("SELECT LocationID, CAST(substr(SampleDate,Length(SampleDate)-3,4) AS INTEGER) SampleYear, CAST(TPmgLfix AS FLOAT) TPmgLfix FROM Sample_Data WHERE Season = 'winter' WHERE TPmgLfix IS NOT 'NA'")
@@ -127,36 +133,36 @@ wintertp3=sqldf("SELECT LocationID, substr(SampleDate,Length(SampleDate)-3,4) Sa
 wintertpDHB=wintertp3[wintertp3$LocationID=="DHB_WRI",]
 #
 # plot DHB winter TP concentration data by year
-# first need to convert characters to numbers and take out NA's
-wintertpDHB.df=data.frame(SampleYear=as.numeric(wintertpDHB$SampleYear[wintertpDHB$TPmgLfix!="NA"]),TPmgLfix=as.numeric(wintertpDHB$TPmgLfix[wintertpDHB$TPmgLfix!="NA"]))
+# first need to convert characters to numbers using as.numeric()
+wintertpDHB.df=data.frame(SampleYear=as.numeric(wintertpDHB$SampleYear),TPmgLfix=as.numeric(wintertpDHB$TPmgLfix))
 boxplot(TPmgLfix~SampleYear,data=wintertpDHB.df,xlab="Year",ylab="TP Concentration (mg/L)",main="DHB Winter Samples")
-#table(wintertpDHB$SampleYear)
+#table(wintertpDHB$SampleYear) #counts per year
 #
 # select out only Inlet
 wintertpInlet=wintertp3[wintertp3$LocationID=="Inlet_WRI",]
 #
 # plot Inlet winter data by year
 # first need to convert characters to numbers and take out NA's
-wintertpInlet.df=data.frame(SampleYear=as.numeric(wintertpInlet$SampleYear[wintertpInlet$TPmgLfix!="NA"]),TPmgLfix=as.numeric(wintertpInlet$TPmgLfix[wintertpInlet$TPmgLfix!="NA"]))
+wintertpInlet.df=data.frame(SampleYear=as.numeric(wintertpInlet$SampleYear),TPmgLfix=as.numeric(wintertpInlet$TPmgLfix))
 boxplot(TPmgLfix~SampleYear,data=wintertpInlet.df,xlab="Year",ylab="TP Concentration (mg/L)",main="Inlet Winter Samples")
-#table(wintertpInlet$SampleYear)
+#table(wintertpInlet$SampleYear) #counts per year
 #
-# select and calculate the average for each year over time
+# select and calculate the average for each year over time for all
 wintertpAvg=sqldf("SELECT LocationID, substr(SampleDate,Length(SampleDate)-3,4) SampleYear, Avg(TPmgLfix) AvgTPmgL FROM Sample_Data WHERE Season = 'winter' GROUP BY LocationID, SampleYear")
 #
 # plot DHB winter data (average) by year
 plot(AvgTPmgL[wintertpAvg$LocationID=="DHB_WRI"]~SampleYear[wintertpAvg$LocationID=="DHB_WRI"],data=wintertpAvg,pch=16,xlab="Year",ylab="Average TP Concentration (mg/L)",main="DHB Winter Samples")
 #
+# plot avearge vs number of samples
+wintertpDHBAvg=sqldf("SELECT SampleYear, Avg(TPmgLfix) AvgTPmgLfix FROM wintertpDHB GROUP BY SampleYear")
+plot(wintertpDHBAvg$AvgTPmgLfix~c(table(wintertpDHB$SampleYear)),pch=16,main="DHB")
+#
 # plot Inlet winter data (average) by year
-plot(AvgTPmgL[wintertpAvg$LocationID=="Inlet_WRI"]~SampleYear[wintertpAvg$LocationID=="Inlet_WRI"],data=wintertpAvg,pch=16,xlab="Year",ylab="Average TP Concentration (mg/L)",main="Inlet Winter Samples")
+plot(AvgTPmgLfix[wintertpAvg$LocationID=="Inlet_WRI"]~SampleYear[wintertpAvg$LocationID=="Inlet_WRI"],data=wintertpAvg,pch=16,xlab="Year",ylab="Average TP Concentration (mg/L)",main="Inlet Winter Samples")
 #
-# 
+# plot avearge vs number of samples
+wintertpInletAvg=sqldf("SELECT SampleYear, Avg(TPmgLfix) AvgTPmgLfix FROM wintertpInlet GROUP BY SampleYear")
+plot(wintertpInletAvg$AvgTPmgLfix~c(table(wintertpInlet$SampleYear)),pch=16,main="inlet")
 #
-sqldf("SELECT LocationID, strftime('%Y',SampleDate) SampleYear, Avg(TPmgL) AvgTPmgL FROM Sample_Data WHERE Season = 'winter' GROUP BY LocationID, SampleYear")
-# avearge vs number of samples
-wintertpInletAvg=sqldf("SELECT SampleYear, Avg(TPmgLfix) AvgTPmgL FROM wintertpInlet GROUP BY SampleYear")
-plot(wintertpInletAvg$AvgTPmgL~c(table(wintertpInlet$SampleYear)),pch=16,main="inlet")
-
-wintertpDHBAvg=sqldf("SELECT SampleYear, Avg(TPmgLfix) AvgTPmgL FROM wintertpDHB GROUP BY SampleYear")
-plot(wintertpDHBAvg$AvgTPmgL~c(table(wintertpDHB$SampleYear)),pch=16,main="dhb")
-
+#
+#

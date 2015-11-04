@@ -12,7 +12,7 @@ Updated: November 4, 2015
 
 ## OLW Phosphorus (P) Database Description ##
 
-The associated Excel file (OLW_P_database.xlsx) contains tabs for various pieces of the database that can be saved as text files and used in conjunction with the example R script also provided (OwascoPDatabase_ExampleQueryScript.R).  The text files coresponding to the different tabs in the Excel file are located in the 'TextFiles' folder.  These data include information on the site location (Site_Info.txt) and the sampling events (Sample_Data.txt).  The third text file (File_Info.txt) is needed to read the site location and sampling event data into R.
+The associated Excel file (OLW_P_database.xlsx) contains tabs for various pieces of the database that can be saved as text files and used in conjunction with the example R script also provided (OwascoPDatabase_ExampleQueryScript.R).  The text files coresponding to the different tabs in the Excel file are located in the 'TextFiles' folder.  These data include information on the site location (Site_Info.txt) and the sampling events (Sample_Data.txt).  The third text file (File_List.txt) is needed to read the site location and sampling event data into R.
 
 
 ## Using the Eample Query Script ##
