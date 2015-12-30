@@ -1,51 +1,51 @@
 RowNum	LocationID	SiteName	Lat	Long	WaterBody	Contact	Sounce	Notes
-1	DHB_WRI	Ducth Hollow Brook	42.86417	-76.50794	Dutch Hollow Brook	Susan Riha	NYS WRI Dataset	
-2	DHB38A_JH	Dutch Hollow Brook 38A	42.86417	-76.50794	Dutch Hollow Brook	John Halfman	John Halfman Report	Same as DHB_WRI
-3	DHBBar_JH	Dutch Hollow Brook Barski Rd	42.86905	-76.48704	Dutch Hollow Brook	John Halfman	John Halfman Report	
-4	DHBBarTrib_JH	Dutch Hollow Brook Barski Rd Trib	42.86945	-76.48727	Dutch Hollow Brook	John Halfman	John Halfman Report	
-5	DHBBen_JH	Dutch Hollow Brook Benson Rd	42.85589	-76.44830	Dutch Hollow Brook	John Halfman	John Halfman Report	
-6	DHBBenTrib_JH	Dutch Hollow Brook Benson Rd Trib	42.85940	-76.44853	Dutch Hollow Brook	John Halfman	John Halfman Report	
-7	DHBCrmHlw_JH	Dutch Hollow Cream Hollow	42.81039	-76.38528	Dutch Hollow Brook	John Halfman	John Halfman Report	
-8	DHBLacyTrib1_JH	Dutch Hollow Lacy Rd Trib	42.86423	-76.43500	Dutch Hollow Brook	John Halfman	John Halfman Report	
-9	DHBLacyTrib2_JH	Dutch Hollow Lacy Rd Trib II	42.86466	-76.42483	Dutch Hollow Brook	John Halfman	John Halfman Report	
-10	DHBMart_JH	Dutch Hollow Martin Rd	42.86930	-76.49112	Dutch Hollow Brook	John Halfman	John Halfman Report	
-11	DHBMur_JH	Dutch Hollow Brook Murray Rd Trib	42.82578	-76.41168	Dutch Hollow Brook	John Halfman	John Halfman Report	
-12	DHBNrd_JH	Dutch Hollow Brook North Rd	42.86060	-76.46532	Dutch Hollow Brook	John Halfman	John Halfman Report	
-13	DHBNTrib_JH	Dutch Hollow North Trib	42.87032	-76.46591	Dutch Hollow Brook	John Halfman	John Halfman Report	
-14	DHBOldSt_JH	Dutch Hollow Brook Old State Rd	42.82872	-76.40747	Dutch Hollow Brook	John Halfman	John Halfman Report	
-15	DHBRowe_JH	Dutch Hollow Rowe	42.84436	-76.42238	Dutch Hollow Brook	John Halfman	John Halfman Report	
-16	DHBSTrib_JH	Dutch Hollow Brook South Trib	42.85413	-76.45548	Dutch Hollow Brook	John Halfman	John Halfman Report	
-17	Fays_JH	Fays Creek	42.84494	-76.52784	Fays Creek	John Halfman	John Halfman Report	
-18	Fill_JH	Fillmore Creek	42.70563	-76.42900	Fillmore Creak	John Halfman	John Halfman Report	
-19	FL20_JH	Fire Ln 20	42.80905	-76.51424	Owasco Lake   	John Halfman	John Halfman Report	
-20	GRTN_WWTP	Grton WWTP	42.59678	-76.15750	Tioughnioga River	John Merriman	Permit Fact Sheet Groton Wastewater Treatment Plant SPDES Permit No. NY0025585	
-21	Hemlock_JH	Hemlock Creek	42.65825	-76.42964	Hemlock Creek	John Halfman	John Halfman Report	
-22	Inlet_WRI	Inlet End of Fire Lane 1	42.75642	-76.46379	Owasco Lake Inlet	Susan Riha	NYS WRI Dataset	
-23	InletAur_JH	Inlet Aurora St	42.71045	-76.43413	Owasco Lake Inlet	John Halfman	John Halfman Report	
+1	DHB_WRI	Ducth Hollow Brook	42.864170	-76.507941	Dutch Hollow Brook	Susan Riha	NYS WRI Dataset	
+2	DHB38A_JH	Dutch Hollow Brook 38A	42.864170	-76.507941	Dutch Hollow Brook	John Halfman	John Halfman Report	Same as DHB_WRI
+3	DHBBar_JH	Dutch Hollow Brook Barski Rd	42.869050	-76.487036	Dutch Hollow Brook	John Halfman	John Halfman Report	
+4	DHBBarTrib_JH	Dutch Hollow Brook Barski Rd Trib	42.869453	-76.487273	Dutch Hollow Brook	John Halfman	John Halfman Report	
+5	DHBBen_JH	Dutch Hollow Brook Benson Rd	42.855886	-76.448299	Dutch Hollow Brook	John Halfman	John Halfman Report	
+6	DHBBenTrib_JH	Dutch Hollow Brook Benson Rd Trib	42.859395	-76.448529	Dutch Hollow Brook	John Halfman	John Halfman Report	
+7	DHBCrmHlw_JH	Dutch Hollow Cream Hollow	42.810389	-76.385279	Dutch Hollow Brook	John Halfman	John Halfman Report	
+8	DHBLacyTrib1_JH	Dutch Hollow Lacy Rd Trib	42.864225	-76.435003	Dutch Hollow Brook	John Halfman	John Halfman Report	
+9	DHBLacyTrib2_JH	Dutch Hollow Lacy Rd Trib II	42.864662	-76.424827	Dutch Hollow Brook	John Halfman	John Halfman Report	
+10	DHBMart_JH	Dutch Hollow Martin Rd	42.869304	-76.491119	Dutch Hollow Brook	John Halfman	John Halfman Report	
+11	DHBMur_JH	Dutch Hollow Brook Murray Rd Trib	42.825782	-76.411684	Dutch Hollow Brook	John Halfman	John Halfman Report	
+12	DHBNrd_JH	Dutch Hollow Brook North Rd	42.860598	-76.465320	Dutch Hollow Brook	John Halfman	John Halfman Report	
+13	DHBNTrib_JH	Dutch Hollow North Trib	42.870316	-76.465911	Dutch Hollow Brook	John Halfman	John Halfman Report	
+14	DHBOldSt_JH	Dutch Hollow Brook Old State Rd	42.828722	-76.407465	Dutch Hollow Brook	John Halfman	John Halfman Report	
+15	DHBRowe_JH	Dutch Hollow Rowe	42.844359	-76.422383	Dutch Hollow Brook	John Halfman	John Halfman Report	
+16	DHBSTrib_JH	Dutch Hollow Brook South Trib	42.854132	-76.455478	Dutch Hollow Brook	John Halfman	John Halfman Report	
+17	Fays_JH	Fays Creek	42.844935	-76.527843	Fays Creek	John Halfman	John Halfman Report	
+18	Fill_JH	Fillmore Creek	42.705627	-76.429000	Fillmore Creak	John Halfman	John Halfman Report	
+19	FL20_JH	Fire Ln 20	42.809053	-76.514243	Owasco Lake   	John Halfman	John Halfman Report	
+20	GRTN_WWTP	Grton WWTP	42.596377	-76.372455?	Owasco Lake Inlet	John Merriman	Permit Fact Sheet Groton Wastewater Treatment Plant SPDES Permit No. NY0025585	
+21	Hemlock_JH	Hemlock Creek	42.658245	-76.429638	Hemlock Creek	John Halfman	John Halfman Report	
+22	Inlet_WRI	Inlet W Cayuga St near Warner Rd	42.716081	-76.437312	Owasco Lake Inlet	Susan Riha	NYS WRI Dataset	
+23	InletAur_JH	Inlet Aurora St	42.710449	-76.434133	Owasco Lake Inlet	John Halfman	John Halfman Report	
 24	InletBall_JH	Inlet Ballpark	42.707145	-76.431405	Owasco Lake Inlet	John Halfman	John Halfman Report	
-25	InletBoothRd_JH	Inlet Booth Rd	42.63165	-76.39755	Owasco Lake Inlet	John Halfman	John Halfman Report	
-26	InletChip_JH	Inlet Chipman Corner	42.60545	-76.36887	Owasco Lake Inlet	John Halfman	John Halfman Report	
-27	InletCtyL_JH	Inlet County Line	42.61808	-76.38404	Owasco Lake Inlet	John Halfman	John Halfman Report	
-28	InletGrtn_JH	Inlet Groton	42.56292	-76.36003	Owasco Lake Inlet	John Halfman	John Halfman Report	
-29	InletLockeDown_JH	Inlet Locke Downstream	42.65164	-76.42458	Owasco Lake Inlet	John Halfman	John Halfman Report	
-30	InletLockeUp_JH	Inlet Locke Upstream	42.66873	-76.43079	Owasco Lake Inlet	John Halfman	John Halfman Report	
-31	InletMor_JH	Inlet Moravia R38	42.71633	-76.43713	Owasco Lake Inlet	John Halfman	John Halfman Report	
-32	InletOldPeru_JH	Inlet Old Peruville Rd	42.54946	-76.36382	Owasco Lake Inlet	John Halfman	John Halfman Report	
-33	InletRnds_JH	Inlet Rounds Ln	42.69101	-76.42550	Owasco Lake Inlet	John Halfman	John Halfman Report	
-34	InletStnyHill_JH	Inlet Stoney Hill Rd	42.64360	-76.40717	Owasco Lake Inlet	John Halfman	John Halfman Report	
-35	InletSuckrL_JH	Inlet Suckerport Ln	42.68158	-76.42646	Owasco Lake Inlet	John Halfman	John Halfman Report	
-36	InletVFW_JH	Inlet VFW	42.70503	-76.43024	Owasco Lake Inlet	John Halfman	John Halfman Report	
-37	Mill_JH	Mill Creek	42.71172	-76.42324	Mill Creek	John Halfman	John Halfman Report	
-38	O_10	Emerson Park	42.90514	-76.53981	Owaco Lake Outlet	Kelly Fallone	CCE P Project	
-39	O_15	Sucker Brook	42.90115	-76.52744	Sucker Brook	Kelly Fallone	CCE P Project	Same as Suckr_JH
-40	O_20	Brook Hollow Drive	42.86417	-76.50794	Dutch Hollow Brook	Kelly Fallone	CCE P Project	Same as DHB_WRI
-41	O_25	Benson Road	42.85589	-76.44830	Dutch Hollow Brook	Kelly Fallone	CCE P Project	Same as DHBBen_JH
-42	O_40	Indian Cove	42.77114	-76.45803	Owasco Lake Inlet	Kelly Fallone	CCE P Project	
-43	OWL_111	Long Hill Road Bridge	42.71045	-76.43413	Owasco Lake Inlet	Kelly Fallone	CCE P Project	Same as InletAur_JH
-44	OWL_112	Rounds Lane	42.69101	-76.42550	Owasco Lake Inlet	Kelly Fallone	CCE P Project	Same as InletRnds_JH
-45	OWL_154	Route 38 Bridge North of Locke	42.66881	-76.43067	Owasco Lake Inlet	Kelly Fallone	CCE P Project	Same as InletLockUp_JH
-46	OWL_158	Walpole Road in Groton	42.59919	-76.37317	Owasco Lake Inlet	Kelly Fallone	CCE P Project	
-47	OWL_604	Route 38 Groton Memorial Wood Bridge	42.59178	-76.36719	Owasco Lake Inlet	Kelly Fallone	CCE P Project	
-48	OWL_DEC	Center of Owasco Lake	42.84450	-76.51600	Owasco Lake   	Clifford Callinan	CCE P Project	
-49	Suckr_JH	Sucker Brook	42.90115	-76.52744	Sucker Brook	John Halfman	John Halfman Report	
-50	Veness_JH	Veness Creek	42.88985	-76.54915	Veness Creek	John Halfman	John Halfman Report	
+25	InletBoothRd_JH	Inlet Booth Rd	42.631654	-76.397554	Owasco Lake Inlet	John Halfman	John Halfman Report	
+26	InletChip_JH	Inlet Chipman Corner	42.605445	-76.368865	Owasco Lake Inlet	John Halfman	John Halfman Report	
+27	InletCtyL_JH	Inlet County Line	42.618077	-76.384042	Owasco Lake Inlet	John Halfman	John Halfman Report	
+28	InletGrtn_JH	Inlet Groton	42.562915	-76.360025	Owasco Lake Inlet	John Halfman	John Halfman Report	
+29	InletLockeDown_JH	Inlet Locke Downstream	42.651639	-76.424579	Owasco Lake Inlet	John Halfman	John Halfman Report	
+30	InletLockeUp_JH	Inlet Locke Upstream	42.668728	-76.430792	Owasco Lake Inlet	John Halfman	John Halfman Report	
+31	InletMor_JH	Inlet Moravia R38	42.716331	-76.437132	Owasco Lake Inlet	John Halfman	John Halfman Report	
+32	InletOldPeru_JH	Inlet Old Peruville Rd	42.549461	-76.363818	Owasco Lake Inlet	John Halfman	John Halfman Report	
+33	InletRnds_JH	Inlet Rounds Ln	42.691010	-76.425501	Owasco Lake Inlet	John Halfman	John Halfman Report	
+34	InletStnyHill_JH	Inlet Stoney Hill Rd	42.643595	-76.407169	Owasco Lake Inlet	John Halfman	John Halfman Report	
+35	InletSuckrL_JH	Inlet Suckerport Ln	42.681577	-76.426462	Owasco Lake Inlet	John Halfman	John Halfman Report	
+36	InletVFW_JH	Inlet VFW	42.705027	-76.430235	Owasco Lake Inlet	John Halfman	John Halfman Report	
+37	Mill_JH	Mill Creek	42.711724	-76.423240	Mill Creek	John Halfman	John Halfman Report	
+38	O_10	Emerson Park	42.905139	-76.539806	Owaco Lake Outlet	Kelly Fallone	CCE P Project	
+39	O_15	Sucker Brook	42.901153	-76.527441	Sucker Brook	Kelly Fallone	CCE P Project	Same as Suckr_JH
+40	O_20	Brook Hollow Drive	42.864170	-76.507941	Dutch Hollow Brook	Kelly Fallone	CCE P Project	Same as DHB_WRI
+41	O_25	Benson Road	42.855886	-76.448299	Dutch Hollow Brook	Kelly Fallone	CCE P Project	Same as DHBBen_JH
+42	O_40	Indian Cove	42.771139	-76.458028	Owasco Lake Inlet	Kelly Fallone	CCE P Project	
+43	OWL_111	Long Hill Road Bridge	42.710449	-76.434133	Owasco Lake Inlet	Kelly Fallone	CCE P Project	Same as InletAur_JH
+44	OWL_112	Rounds Lane	42.691010	-76.425501	Owasco Lake Inlet	Kelly Fallone	CCE P Project	Same as InletRnds_JH
+45	OWL_154	Route 38 Bridge North of Locke	42.668806	-76.430667	Owasco Lake Inlet	Kelly Fallone	CCE P Project	Same as InletLockUp_JH
+46	OWL_158	Walpole Road in Groton	42.599194	-76.373167	Owasco Lake Inlet	Kelly Fallone	CCE P Project	
+47	OWL_604	Route 38 Groton Memorial Wood Bridge	42.591778	-76.367194	Owasco Lake Inlet	Kelly Fallone	CCE P Project	
+48	OWL_DEC	Center of Owasco Lake	42.844500	-76.516000	Owasco Lake   	Clifford Callinan	CCE P Project	
+49	Suckr_JH	Sucker Brook	42.901153	-76.527441	Sucker Brook	John Halfman	John Halfman Report	
+50	Veness_JH	Veness Creek	42.889847	-76.549153	Veness Creek	John Halfman	John Halfman Report	
